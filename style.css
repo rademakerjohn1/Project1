@@ -1,0 +1,157 @@
+
+#modal-img-container img {
+    max-width: 100%;
+}
+
+/* Set font */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ /* General Button Styling */
+ .btn {
+    border-radius: 50px;
+    padding: 10px 25px;
+    border: 0px;
+}
+
+/* Jumbotron Section */
+.jumbotron {
+    padding: 1rem;
+    background-color: #6290B2;
+}
+
+.jumbotron .container {
+    padding-left: 35px;
+}
+
+.jumbotron img {
+    vertical-align: top;
+    margin-right: 20px;
+}
+#jumboText {
+    display: inline-block;
+}
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+}
+.jumbotron h2 {
+    color: #DAE2E8;
+}
+
+
+/* Override top padding for Bootstrap container */
+.container-sm, .p-5 {
+    padding-top: 0rem!important;
+    text-align: center;
+    }
+
+
+/* Language Selection Row */
+
+textarea {
+    height: 75px;
+}
+
+#row2 {
+    display: inline-block;
+    text-align: center;
+}
+.dropdown {
+    padding-top: 25px;
+    color: darkslategray;
+}
+.dropdown-toggle {
+    background-color: #B52C85;
+    color: white;
+}
+
+/* Card Section */
+#row3 {
+    margin-top: 25px;
+}
+
+/* Card Styling */
+#row3 .card {
+    padding: 15px;
+    background-color: #6290B2;  
+    /* border-radius: 25px; */
+    border: 0px;
+}
+#row3 .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    color: white;
+}
+#row3 .card .btn, .card .btn-info {
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #573B6B;
+}
+#row3 .card-footer {
+    background-color: transparent;
+    border: 0px;
+}
+
+/* Clear Button Styling */
+.d-inline-flex {
+    margin-top: 25px;
+}
+.d-inline-flex .btn-danger {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #B52C85;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid black;
+    margin-top: 15px;
+    width: 100%;
+}
+footer p {
+    margin-top: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 700px) {
+    .card:first-child {
+        margin-bottom: 25px;
+    }
+    .dropdown-toggle {
+       margin-top: 20px;
+    }
+    .jumbotron {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .jumbotron {
+        text-align: center;
+    }
+}
+
+/* .books .card {
+    max-height: 350px;
+    display: flex;
+} */
+
+.books .card {
+    padding: 15px;
+    border: none;
+}
+.books .card-title {
+    font-weight: bolder;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.books .card-body {
+    padding-top: 0px;
+}
+
+.modal-header {
+    border: 0px;
+}
