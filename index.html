@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap's CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Our CSS link -->
+    <link rel="stylesheet" href="style.css">
+    <!--Link to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <!-- Bootstrap's JavaScript Links -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title>Project 1 - Translation App</title>
+
+</head>
+<body>
+
+<!--Header-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <img class="flex" src="textbox.png" width="150px">
+        <div id="jumboText" class="flex">
+            <h1 id="title">What did you say?</h1>
+            <h2>A Translation App</h2>
+        </div>
+    </div>
+</div>
+
+<!--Container-->
+<div class="container-sm p-5" style="display: block;"> 
+
+<!-- Modal -->
+<div class="modal fade" id="loading-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="search-sel"></h2>
+        </div>
+        <div class="modal-body">
+            <div id="modal-img-container">
+              <img id="modal-img" width="100">
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alert-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="alert-message"></h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="modal-img-container">
+              <img id="modal-img" width="100">
+             </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+   
+    <!--Translate Options-->
+    <div class="row" id="row2">
+        <div>
+            <div class="dropdown">
+                <h3>Translate from English to
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Language Choices
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" id="spanish"><img src="spain.png" width="20px">Spanish</button>
+                        <button class="dropdown-item" id="chinese"><img src="china.png" width="20px">Chinese</button>
+                    </div>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!--Text Boxes-->
+    <div class="row" id="row3">
+
+        <!--English Text-->
+        <div class="col" id="englishText">
+            <div class="card">
+                <div class="card-header">
+                    <h2>English</h2>
+                </div>
+                <div class="card-body">
+                    <textarea class="col" id="inputText"
+                    placeholder="Your Text Here"
+                    ></textarea>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-primary tooltip-test" title="Translate your text" id="translateBtn">Translate</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Translation Text-->
+        <div class="col" id="translationText">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Translation</h2>
+                </div>
+                <div class="card-body">
+                    <textarea class="col" id="outputText"
+                    placeholder="Your Translation Here"
+                    ></textarea>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-info tooltip-test" title="Copy your translation" id="copyBtn">Copy Text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Clear Button -->
+    <div id="clearBtn row4" class="row p-3 d-inline-flex">
+        <button type="button" class="btn btn-danger tooltip-test" title="Both the English and Translation text fields will be cleared" id="clearBtn">Clear All</button>
+    </div>
+
+     <!--Book Rows-->
+    <div id="book-section-header"></div>    
+    <div class="row books"></div>  
+
+
+    <!--Footer-->
+    <div id="footerDiv row6" class="row">
+        <footer id="footer">
+            <p id="footerText">
+                &copy; Copyright 2020 Sarah, Cindy, John and Josh. Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </p>
+        </footer>
+    </div>    
+</div>
+<!-- Our JavaScript Link -->
+
+<script src="script.js"></script>
+</body>
+</html>
