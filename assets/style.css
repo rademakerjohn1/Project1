@@ -1,15 +1,10 @@
-
-#modal-img-container img {
-    max-width: 100%;
-}
-
 /* Set font */
 body {
     font-family: 'Open Sans', sans-serif;
 }
 
- /* General Button Styling */
- .btn {
+/* General Button Styling */
+.btn {
     border-radius: 50px;
     padding: 10px 25px;
     border: 0px;
@@ -50,7 +45,6 @@ h1 {
 
 
 /* Language Selection Row */
-
 textarea {
     height: 75px;
 }
@@ -106,6 +100,15 @@ textarea {
     background-color: #B52C85;
 }
 
+/* Modal Styling */
+.modal-header {
+    border: 0px;
+}
+
+#modal-img-container img {
+    max-width: 100%;
+}
+
 /* Footer Styling */
 footer {
     border-top: 1px solid black;
@@ -115,6 +118,22 @@ footer {
 footer p {
     margin-top: 15px;
 }
+
+/* Book Section Styling */
+.books .card {
+    padding: 15px;
+    border: none;
+}
+.books .card-title {
+    font-weight: bolder;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.books .card-body {
+    padding-top: 0px;
+}
+
+
 
 /* Media Queries */
 @media screen and (max-width: 700px) {
@@ -132,26 +151,4 @@ footer p {
     .jumbotron {
         text-align: center;
     }
-}
-
-/* .books .card {
-    max-height: 350px;
-    display: flex;
-} */
-
-.books .card {
-    padding: 15px;
-    border: none;
-}
-.books .card-title {
-    font-weight: bolder;
-    font-size: 14px;
-    margin-top: 5px;
-}
-.books .card-body {
-    padding-top: 0px;
-}
-
-.modal-header {
-    border: 0px;
 }
